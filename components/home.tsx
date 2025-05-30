@@ -35,18 +35,23 @@ export default function BackgroundGradientAnimationDemo() {
             <p className="text-2xl font-bold text-left">
               {" "}
               Hi! I'm Juan Camilo Lopez, a{" "}
-              <b className="text-blue-600 dark:text-blue-400">web developer</b>,
-              with a degree in{" "}
               <b className="text-blue-600 dark:text-blue-400">
-                Systems technology
+                software developer
               </b>
-              . I am interested in{" "}
+              , With hands-on experience in{" "}
               <b className="text-blue-600 dark:text-blue-400">
-                UX/UI design,ai,video games
+                full-stack development.
+              </b>{" "}
+              I've designed user interfaces and managed websites using{" "}
+              <b className="text-blue-600 dark:text-blue-400">
+                WordPress and Elementor.
+              </b>{" "}
+              I'm passionate about exploring: {""}
+              <b className="text-blue-600 dark:text-blue-400">
+                UX/UI design, AI, and video games.
               </b>
-              . I enjoy working in multidisciplinary teams, where I can learn
-              new skills and perspectives. I believe web development is more
-              interesting when it's interactive and engaging.
+              {""} I thrive in multidisciplinary teams and am driven to build
+              web experiences that are both interactive and engaging.
             </p>
           </div>
         </motion.div>
