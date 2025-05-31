@@ -1,33 +1,32 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
-import { useTheme } from 'next-themes'
-
+import { useTheme } from "next-themes";
 
 export const BackgroundGradientAnimation = ({
-  gradientBackgroundStart = "rgb(255, 219, 242)", //--background
-  gradientBackgroundEnd = "rgb(255, 201, 237)", //--details
-  firstColor = "191, 236, 255", //--secondary
-  secondColor = "205, 193, 255", //--tertiary
-  thirdColor = "191, 236, 255", //--secondary
-  fourthColor = "205, 193, 255", //--tertiary
-  fifthColor = "191, 236, 255", //--secondary
-  pointerColor = "255, 110, 207", //--details 20% mas oscuro
-  darkGradientBackgroundStart = "rgb(28, 13, 2)", //--darkbackground
-  darkGradientBackgroundEnd = "rgb(5, 6, 9)", //--darkdetails
-  darkFirstColor = "71, 102, 115", //--darksecondary
-  darkSecondColor = "140, 128, 189", //--darktertiary
-  darkThirdColor = "71, 102, 115", //--darksecondary
-  darkFourthColor = "140, 128, 189", //--darktertiary
-  darkFifthColor = "71, 102, 115", //--darksecondary
-  darkPointerColor = "142, 100, 94", //--darkdetails 20% mas claro
+  gradientBackgroundStart = "rgb(30, 35, 40)", //--background
+  gradientBackgroundEnd = "rgb(15, 20, 25)", //--details
+  firstColor = "50, 60, 75", //--secondary
+  secondColor = "40, 50, 65", //--tertiary
+  thirdColor = "50, 60, 75", //--secondary
+  fourthColor = "40, 50, 65", //--tertiary
+  fifthColor = "50, 60, 75", //--secondary
+  pointerColor = "80, 90, 110", //--details 20% mas oscuro
+  darkGradientBackgroundStart = "rgb(30, 35, 40)", //--darkbackground
+  darkGradientBackgroundEnd = "rgb(15, 20, 25)", //--darkdetails
+  darkFirstColor = "50, 60, 75", //--darksecondary
+  darkSecondColor = "40, 50, 65", //--darktertiary
+  darkThirdColor = "50, 60, 75", //--darksecondary
+  darkFourthColor = "40, 50, 65", //--darktertiary
+  darkFifthColor = "50, 60, 75", //--darksecondary
+  darkPointerColor = "80, 90, 110", //--darkdetails 20% mas claro
   size = "100%",
   blendingValue = "hard-light",
   children,
   className,
   interactive = true,
   containerClassName,
-} : {
+}: {
   gradientBackgroundStart?: string;
   gradientBackgroundEnd?: string;
   firstColor?: string;
@@ -51,7 +50,7 @@ export const BackgroundGradientAnimation = ({
   interactive?: boolean;
   containerClassName?: string;
 }) => {
-  const { setTheme, resolvedTheme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme();
   const interactiveRef = useRef<HTMLDivElement>(null);
 
   const [curX, setCurX] = useState(0);
@@ -60,25 +59,24 @@ export const BackgroundGradientAnimation = ({
   const [tgY, setTgY] = useState(0);
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
-    if(resolvedTheme === 'light'){
-    document.body.style.setProperty(
-      "--gradient-background-start",
-      gradientBackgroundStart
-    );
-    document.body.style.setProperty(
-      "--gradient-background-end",
-      gradientBackgroundEnd
-    );
-    document.body.style.setProperty("--first-color", firstColor);
-    document.body.style.setProperty("--second-color", secondColor);
-    document.body.style.setProperty("--third-color", thirdColor);
-    document.body.style.setProperty("--fourth-color", fourthColor);
-    document.body.style.setProperty("--fifth-color", fifthColor);
-    document.body.style.setProperty("--pointer-color", pointerColor);
-    document.body.style.setProperty("--size", size);
-    document.body.style.setProperty("--blending-value", blendingValue);
-    }
-    else{
+    if (resolvedTheme === "light") {
+      document.body.style.setProperty(
+        "--gradient-background-start",
+        gradientBackgroundStart
+      );
+      document.body.style.setProperty(
+        "--gradient-background-end",
+        gradientBackgroundEnd
+      );
+      document.body.style.setProperty("--first-color", firstColor);
+      document.body.style.setProperty("--second-color", secondColor);
+      document.body.style.setProperty("--third-color", thirdColor);
+      document.body.style.setProperty("--fourth-color", fourthColor);
+      document.body.style.setProperty("--fifth-color", fifthColor);
+      document.body.style.setProperty("--pointer-color", pointerColor);
+      document.body.style.setProperty("--size", size);
+      document.body.style.setProperty("--blending-value", blendingValue);
+    } else {
       document.body.style.setProperty(
         "--gradient-background-start",
         darkGradientBackgroundStart
@@ -127,11 +125,10 @@ export const BackgroundGradientAnimation = ({
     setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
   }, []);
 
-
   return (
     <div
       className={cn(
-        "h-[130vh] w-full relative overflow-hidden top-0 left-0 bg-[linear-gradient(90deg,var(--gradient-background-start),var(--gradient-background-end))]",
+        "h-[80vh] w-full relative overflow-hidden top-0 left-0 bg-[linear-gradient(90deg,var(--gradient-background-start),var(--gradient-background-end))]",
         containerClassName
       )}
     >

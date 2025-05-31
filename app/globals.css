@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --background: rgba(219, 219, 255, 0.157);
-  --details: rgba(255, 201, 201, 0);
-  --text: rgb(70, 51, 51);
-  --secondary: rgb(191, 236, 255);
-  --tertiary: rgb(205, 193, 255);
+  --background: #050609;
+  --details: #050609;
+  --text: rgb(255, 240, 249);
+  --secondary: rgb(71, 102, 115);
+  --tertiary: rgb(140, 128, 189);
   --dark-background: #050609;
   --dark-details: #050609;
   --dark-text: rgb(255, 240, 249);

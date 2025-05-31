@@ -69,7 +69,7 @@ const Header = () => {
       <div
         className={
           nav
-            ? " backdrop-filter z-10 left-0 top-0 ease-in-out duration-500  w-[100vw] h-[100vh] inset-0   bg-text dark:bg-darktext bg-opacity-70  backdrop-blur-lg fixed flex justify-center items-center md:justify-normal md:items-normal mt-24 "
+            ? " backdrop-filter z-10 left-0 top-0 ease-in-out duration-500  w-[100vw] h-[100vh] inset-0   bg-text dark:bg-slate-200 bg-opacity-70  backdrop-blur-lg fixed flex justify-center items-center md:justify-normal md:items-normal mt-24 "
             : "ease-in-out w-[100vw] h-[100vh]  duration-500 fixed top-0 left-[-100vw]  "
         }
       >
@@ -170,7 +170,7 @@ const Header = () => {
       <motion.div
         className={`font-bold transition ease-in-out duration-300  ${
           bgTransparent && nav
-            ? " bg-text dark:bg-darktext bg-opacity-70 backdrop-filter backdrop-blur-lg text-details dark:text-darkdetails"
+            ? " bg-text dark:bg-slate-200 bg-opacity-70 backdrop-filter backdrop-blur-lg text-details dark:text-darkdetails"
             : bgTransparent
             ? " bg-transparent text-text dark:text-darktext"
             : "bg-text dark:bg-darktext shadow-lg shadow-black/[0.03] bg-opacity-95 text-details dark:text-darkdetails"
