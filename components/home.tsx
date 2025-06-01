@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 
 /* import { Parallax } from "react-scroll-parallax";
  */
-// (...) otras importaciones y código del componente
 
 export default function BackgroundGradientAnimationDemo() {
   return (
-    <BackgroundGradientAnimation containerClassName="h-screen" className="">
+    <BackgroundGradientAnimation containerClassName="min-h-screen" className="">
       <div
         id="Inicio"
+        // Este div ya tiene z-10, lo que debería estar bien
         className="absolute z-10 inset-0 flex items-center justify-center text-text dark:text-darktext font-bold lg:pointer-events-none text-2xl text-center md:text-3xl lg:text-5xl mt-14 md:-mt-24"
       >
         <motion.div
@@ -21,13 +21,14 @@ export default function BackgroundGradientAnimationDemo() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 1 }}
-          className="flex flex-col md:flex-row items-center justify-center pt-28 md:pt-0  gap-10 w-screen h-screen "
+          // --> Añade 'relative z-[1]' aquí
+          className="relative z-[1] flex flex-col md:flex-row items-center justify-center pt-28 md:pt-0 gap-6 md:gap-10 w-screen pb-16"
         >
-          <div className="flex w-[90vw] md:w-[20vw] flex-col justify-center gap-10 items-center md:items-right">
+          {/* Columna Izquierda (Título y Logo) */}
+          <div className="flex w-[90vw] md:w-[20vw] flex-col justify-center gap-6 md:gap-10 items-center md:items-end">
             <h1 className="text-3xl font-bold w-full text-center md:text-center">
               Juan Camilo Lopez
             </h1>
-
             <div className="w-full aspect-square bg-white rounded-full p-4 sm:p-5 md:p-6 shadow-lg flex items-center justify-center overflow-hidden">
               <Image
                 src="/Images/logo-transparent.png"
@@ -39,8 +40,9 @@ export default function BackgroundGradientAnimationDemo() {
             </div>
           </div>
 
+          {/* Columna Derecha (Párrafo) */}
           <div className="flex w-[90vw] md:w-[40vw] items-center justify-start">
-            <p className="text-xl font-bold text-left">
+            <p className="text-xl text-left">
               {" "}
               I am a{" "}
               <b className="text-blue-600 dark:text-blue-400">
