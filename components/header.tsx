@@ -179,7 +179,11 @@ const Header = () => {
         animate={{ y: 0, opacity: 1 }}
       >
         {/* Logo */}
-        <Link href={"/"} className="z-30" onClick={handleNavFalse}>
+        <Link
+          href={"/"}
+          className="z-30 cursor-default"
+          onClick={handleNavFalse}
+        >
           <Image
             src={bgTransparent ? "/Images/icon2.png" : "/Images/icon2.png"}
             alt="Logo GoBig"
